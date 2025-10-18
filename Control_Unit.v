@@ -2,16 +2,16 @@ module Control_Unit(opcode, funct7, funct3, ALUOp, ALUSrc, Branch, MemWrite, Mem
 input [6:0] opcode;
 input [6:0] funct7;
 input [2:0] funct3;
-output [1:0] ALUOp;     // 00 -> add; 01 -> sub;
+output reg [1:0] ALUOp; // 00 -> add; 01 -> sub;
                         // 10 -> R-type or 2nd part of I-type
                         // 11 -> Sepical case: ADDI
 
-output ALUSrc;          // 1 -> imm; 0 -> rs2
-output Branch;          
-output MemWrite;        
-output MemRead;
-output MemToReg;        // 1 -> memData; 0 -> ALUResult 
-output RegWrite;
+output reg ALUSrc;          // 1 -> imm; 0 -> rs2
+output reg Branch;          
+output reg MemWrite;        
+output reg MemRead;
+output reg MemToReg;        // 1 -> memData; 0 -> ALUResult 
+output reg RegWrite;
 
 
 always@(*) begin

@@ -2,7 +2,7 @@ module ALU_Control_Unit(ALUOp, funct7, funct3, ALUControl)
 input [1:0] ALUOp;
 input funct7;
 input [2:0] funct3;
-output [3:0] ALUControl;
+output reg [3:0] ALUControl;
 
 always@(*) begin
     case(ALUOp)
