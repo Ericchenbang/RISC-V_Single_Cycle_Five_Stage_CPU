@@ -14,7 +14,7 @@ always@(*) begin
         2'b2:
             nextPC = {ALU_Result[31:1] , 0};
         default:
-            nextPC = nextPC + 4;
+            nextPC = currPC + 4;
     endcase
 end
 endmodule

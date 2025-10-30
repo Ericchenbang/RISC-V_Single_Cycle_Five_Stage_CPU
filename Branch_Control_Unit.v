@@ -28,7 +28,7 @@ always@(*) begin
                     3'b100:     // BLT
                         Branch_Control = (signedLT) ? 2'd1: 2'd0; 
                     3'b101:     // BGE
-                        Branch_Control = (~signedLT) ? 2'd2: 2'd0;
+                        Branch_Control = (~signedLT) ? 2'd1: 2'd0;
                     3'b110:     // BLTU
                         Branch_Control = (unsignedLT) ? 2'd1: 2'd0; 
                     3'b111:     // BGEU
